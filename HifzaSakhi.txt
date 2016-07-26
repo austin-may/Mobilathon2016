@@ -1,0 +1,4 @@
+Created a sample view of the first screen users will encounter when they start the app. It can be accessed directly at this link for now: 
+file:///C:/Users/hs647a/Documents/Mobilithon/Mobilathon2016/www/index.html#/app/sample
+
+Shows the button for volunteer or staff member. 
