@@ -19,7 +19,23 @@ angular.module('starter.controllers', [])
 
 
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function($scope, $ionicPopup) {
+
+  $scope.doVolunteer = function() {
+  var alertPopup = $ionicPopup.alert({
+                title: 'Thank You!',
+                template: 'You are signed up to Volunteer!'
+            });
+    } 
+
+    $scope.doAddress = function() {
+  var alertPopup = $ionicPopup.alert({
+                title: 'Maps',
+                template: 'Address: 123 AT&T Way'
+            });
+    } 
+
+})
 
 .controller('RequestsCtrl', function($scope, requests) {
   // With the new view caching in Ionic, Controllers are only called
