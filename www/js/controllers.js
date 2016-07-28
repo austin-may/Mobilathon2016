@@ -19,23 +19,19 @@ angular.module('starter.controllers', [])
 
 
 
-.controller('DashCtrl', function($scope, $ionicPopup) {
+.controller('DashCtrl', ['$scope', '$http', '$state', function($scope, $http, $state) {
+  $http.get('js/data.json').success(function(data) {
+    $scope.events = data.events;
+    $scope.whichevent = $state.params.eId;
 
-  $scope.doVolunteer = function() {
-  var alertPopup = $ionicPopup.alert({
-                title: 'Thank You!',
-                template: 'You are signed up to Volunteer!'
-            });
-    } 
-
-    $scope.doAddress = function() {
-  var alertPopup = $ionicPopup.alert({
-                title: 'Maps',
-                template: 'Address: 123 AT&T Way'
-            });
-    } 
-
-})
+    $scope.doRefresh = function() {
+      $http.get('js/data.json').success(function(data) {
+        $scope.events = data;
+        $scope.$broadcast('scroll.refreshComplete');
+      });
+    }
+  })
+}])
 
 .controller('RequestsCtrl', function($scope, requests) {
   // With the new view caching in Ionic, Controllers are only called

@@ -1,26 +1,23 @@
+
 <ion-view view-title="Dashboard">
-  <ion-content class="padding">
-  <ion-refresher on-refresh="doRefresh()">
-  </ion-refresher>
-
+  <div class="bar bar-subheader 
+    item-input-inset bar-light">
+    <label class="item-input-wrapper">
+      <i class="icon ion-search placeholder-icon"></i>
+      <input type="search" ng-model="query" placeholder="Search">
+    </label>
+  </div>
+  <ion-content class="padding has-subheader">
+    <ion-refresher on-refresh="doRefresh()">
+    </ion-refresher>
     <div class="list card">
-
-  <div class="item">
-    <h2>Heroes On The Water</h2>
-    <p>September 3, 2016</p>
-    <p>Mid-Atlanta Area</p>
-  </div>
-
-  <div class="item item-body">
-    <p>
-      Join us to continue the fishing season with a great day on the water. Equipment, food and lots of laughs will be provided at no charge for active duty servicemembers, veterans and their families. We will be fishing at Randleman Lake. Restroom facilities will be available. Children's activities will be provided. A playground and picnic area with space to run will be available as well.
-    </p>
-    <p>
-      <button class="button" ng-click="doVolunteer()">Volunteer</button>
-      <button class="button" ng-click="doAddress()">Address</button>
-    </p>
-  </div>
-
-</div>
+      <ion-item ng-repeat='item in events | filter: query' 
+      class="item-text-wrap" href="#tab/dash/{{item.Name}}">
+        <h2>{{item.Name}}</h2>
+        <h3>{{item.Venue}}</h3>
+        <p>{{item.Date}}, {{item.Start_time}}</p>
+      </ion-item>
+    </div>
   </ion-content>
 </ion-view>
+

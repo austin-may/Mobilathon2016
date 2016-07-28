@@ -1,0 +1,16 @@
+<ion-view view-title="More Info" class="bar-assertive"></ion-view>
+
+<ion-view>
+  <ion-content>
+    <ion-list class="list-inset">
+      <ion-item class="item-text-wrap" 
+      ng-repeat="item in events | filter: { Name: whichevent }">
+            <h2>{{item.Name}}</h2>
+            <h3>{{item.Venue}}</h3>
+            <h4>{{item.Date}}</h4>
+            <p>{{item.Start_time}} until {{item.End_time}}</p>
+            <p>{{item.Description}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
