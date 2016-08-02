@@ -1,12 +1,12 @@
-<ion-view view-title="Welcome to Heroes On The Water!" name="login-view">
-  <ion-content class="padding splash">
+<ion-view view-title="Heroes On The Water" name="login-view">
+  <ion-content class="padding">
   <div class="row">
    <div class="col text-center">
  <img ng-src="img/how-logo.png">
     </div>
     </div>
  
-      <div class="list list-inset">
+      <div class="list">
           <label class="item item-input">
               <input type="text" placeholder="Username" ng-model="data.username">
           </label>
@@ -20,11 +20,10 @@
       <button class="button button-full button-positive" ng-click="login()">Login</button>
       <div class="row">
    <div class="col text-center">
-      <button class="button button-clear button-positive" ng-click="register()">Register</button>
-   </div>
+      <button class="col.col-50 button button-outline button-positive" ng-click="register()" style="width:100%">Register</button>
    </div>
    <div class="col text-center">
-      <button class="button button-clear button-assertive" ng-click="forgetpassword()">Forgot Password?</button>
+      <button class="col.col-50 button button-outline button-assertive" ng-click="forgetpassword()">Forgot Password?</button>
    </div>
     </div>
   </ion-content>
