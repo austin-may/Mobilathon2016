@@ -16,6 +16,6 @@
 	background-color: transparent;
 
 }
-#loginButton {
-	border-radius: 15px;
+#loginButton, #scanButton {
+	border-radius: 150px;
 }
