@@ -42,6 +42,6 @@ angular.module('starter.controllers', [])
         }, function(error) {
             console.log("An error happened -> " + error);
         });
-    };
+    }
  
 });
