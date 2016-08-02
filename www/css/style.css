@@ -2,3 +2,18 @@
 .scroll-content{
   background-color:#DCDCDC;
 }
+
+.splash {
+	background: url(http://heroesonthewater.org/wp-content/uploads/2014/01/HOW_2012-2119-L.jpg) no-repeat center center fixed;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.item-content {
+	background-color: transparent;
+
+}
+s

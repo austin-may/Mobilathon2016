@@ -23,10 +23,15 @@ angular.module('starter.controllers', [])
   $http.get('js/data.json').success(function(data) {
     $scope.events = data.events;
     $scope.whichevent = $state.params.eId;
+    $scope.data = { showDelete: false };
+
+    $scope.onItemDelete = function(item) {
+        $scope.events.splice($scope.events.indexOf(item), 1);
+    }
 
     $scope.doRefresh = function() {
       $http.get('js/data.json').success(function(data) {
-        $scope.events = data;
+        $scope.events = data.events;
         $scope.$broadcast('scroll.refreshComplete');
       });
     }
