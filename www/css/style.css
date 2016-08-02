@@ -16,4 +16,6 @@
 	background-color: transparent;
 
 }
-s
+#loginButton {
+	border-radius: 15px;
+}
