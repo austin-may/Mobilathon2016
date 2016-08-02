@@ -14,11 +14,13 @@
     <ion-refresher on-refresh="doRefresh()">
     </ion-refresher>
     <ion-list class="list card" show-delete="data.showDelete">
-      <ion-item ng-repeat='item in events | filter: query' 
-      class="item-text-wrap" href="#tab/dash/{{item.Name}}">
+      <ion-item ng-class="{'star': item.star}" ng-repeat='item in events | filter: query' 
+      class="item-icon-right item-text-wrap" href="#tab/dash/{{item.Name}}">
         <h2>{{item.Name}}</h2>
         <h3>{{item.Venue}}</h3>
         <p>{{item.Date}}, {{item.Start_time}}</p>
+        <button class="button button-clear icon ion-star button-assertive" ng-click="toggleStar(item)" ng-show="item.star"></button>
+        <ion-option-button class="button-dark" ng-click="toggleStar(item)"><i class="icon ion-star"></i></ion-option-button>
         <ion-delete-button class="ion-minus-circled" ng-click="onItemDelete(item)"></ion-delete-button>
       </ion-item>
     </ion-list>

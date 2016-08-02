@@ -29,6 +29,10 @@ angular.module('starter.controllers', [])
         $scope.events.splice($scope.events.indexOf(item), 1);
     }
 
+    $scope.toggleStar = function(item) {
+        item.star = !item.star;
+    }
+
     $scope.doRefresh = function() {
       $http.get('js/data.json').success(function(data) {
         $scope.events = data.events;
