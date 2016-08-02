@@ -69,6 +69,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         }
       }
     })
+
+   .state('tab.log_out', {
+      url: '/log_out',
+      views: {
+        'tab-log_out': {
+          templateUrl: 'templates/log_out.html',
+          controller: 'LogOffCtrl'
+        }
+      }
+    })
     .state('tab.request-detail', {
       url: '/requests/:RequestId',
       views: {

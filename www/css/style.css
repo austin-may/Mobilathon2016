@@ -16,6 +16,9 @@
 	background-color: transparent;
 
 }
-#loginButton, #scanButton {
+#loginButton, #scanButton, .myButton {
 	border-radius: 150px;
+}
+.centerIt {
+	text-align: center;
 }

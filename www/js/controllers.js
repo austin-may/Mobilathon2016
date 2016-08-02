@@ -15,6 +15,28 @@ angular.module('starter.controllers', [])
     }
 })
 
+.controller('LogOffCtrl', function($scope, LoginService, $ionicPopup, $state) {
+    $scope.data = {};
+ 
+    $scope.logOut = function(){
+
+        $scope.data.username = null;
+        $scope.data.password = null;
+        $state.go('login');
+        var alertPopup = $ionicPopup.alert({
+            title: 'You have successfully exited the application!'
+        });
+        //$ionicHistory.clearHistory();    
+        //$ionicHistory.clearCache();
+        //$scope.user.username = '';
+       // alert($scope);
+
+       // $scope.user.password = "";
+        //alert($scope.data.password);
+
+
+};
+})
 
 
 
